@@ -1,0 +1,92 @@
+/* Flexbox layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    padding: 1rem;
+}
+
+/* Width distribution */
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Header styling */
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header li.logo {
+    font-size: 2rem;
+}
+
+header li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+}
+
+header li a:hover {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Additional styling for article content */
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+article table th, article table td {
+    padding: 10px;
+    border: 1px solid #bbb;
+    text-align: left;
+}
+
+article img {
+    max-width: 150px;
+    display: block;
+    margin: 1rem 0;
+}
+
+/* Aside styling */
+aside p {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    body.works_on_smartphone main {
+        flex-direction: column;
+    }
+    article, aside {
+        width: 100%;
+        flex: auto;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header li.logo {
+        margin-bottom: 10px;
+    }
+}
